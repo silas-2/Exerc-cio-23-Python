@@ -41,7 +41,9 @@ VOTO OBRIGATÓRIO
 | 70    | VOTO OBRIGATÓRIO |
 | 75    | VOTO OPCIONAL |
 
-## 🔍 Estrutura do Código
+## 🔍 Versões do Código
+
+### ✅ Versão 1: Com elif encadeados
 
 ```python
 idade = int(input("Digite a Idade: "))
@@ -56,11 +58,36 @@ else:
     print("VOTO OPCIONAL")
 ```
 
+**Arquivo:** `exercicio_23.py`
+
+---
+
+### ⭐ Versão 2: Com operador OR (Mais Elegante!)
+
+```python
+idade = int(input("Digite a Idade: "))
+
+if idade < 16:
+    print("NÃO PODE VOTAR")
+elif idade < 18 or idade > 70:
+    print("VOTO OPCIONAL")
+else:
+    print("VOTO OBRIGATÓRIO")
+```
+
+**Arquivo:** `exercicio_23_v2.py`
+
+**💡 Por que essa versão é mais elegante?**
+- Simplifica a lógica combinando as duas condições para "VOTO OPCIONAL" usando o operador `or`
+- Reduz a quantidade de `elif` necessários
+- Torna o código mais legível e fácil de manter
+
 ## 📚 Conceitos Utilizados
 
 - **Entrada de dados**: `input()` e conversão com `int()`
 - **Estrutura condicional**: `if`, `elif`, `else`
-- **Comparações**: `<`, `<=`
+- **Operadores de comparação**: `<`, `<=`, `>`
+- **Operador lógico**: `or`
 - **Saída de dados**: `print()`
 
 ## 🚀 Requisitos
